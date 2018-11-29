@@ -1,0 +1,263 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8714baca-f34b-4c48-84e8-e5bac8a07dcd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Insurance Coverage</ID>
+  <Name>Dim Insurance Coverage</Name>
+  <CreatedTimestamp>2017-11-21T10:00:49.643333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2017-12-19T06:26:05.966667Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3645" scrolltop="-8017" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="11060" y="18759" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01a10000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimInsuranceCoverage" left="-1012" top="-5821" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4419" height="8571" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000431100007b210000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimInsuranceCoverage" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3645</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-8017</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-1012</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-5821</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2017-12-19T06:30:20.373333Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="667ed2ea-0497-44b3-906d-e3cc38fa084d">
+    <DataSourceViewID>InterDSV</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="6288649c-b657-4393-9197-1c08e677449c">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Language>1033</Language>
+  <Collation>Greek_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="dcf4ffa1-666e-4dd4-a0a9-331d004280fa">
+      <ID>Cover ID</ID>
+      <Name>Cover ID</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>3913</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="00cede1f-cecb-44aa-b749-b3d461cb9c0f">
+          <DataType>WChar</DataType>
+          <DataSize>58</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f5fa85b8-f9d4-471f-8d82-b92f89b71f48">
+            <TableID>dbo_DimInsuranceCoverage</TableID>
+            <ColumnID>CoverID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3e0deb33-6465-444d-a013-9679c2f4f2a2">
+        <DataType>WChar</DataType>
+        <DataSize>153</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="9c7bfeb5-fa09-435c-8764-908cf0b58c24">
+          <TableID>dbo_DimInsuranceCoverage</TableID>
+          <ColumnID>CoverDescription_ODS</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="62f5f3eb-b9c9-4b54-a9d5-ff1a3330f132">
+          <AttributeID>Company Branch Key</AttributeID>
+          <Name>Branch</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9ae221d1-c9c2-40b0-91c6-65a653355edb">
+          <AttributeID>Company ID</AttributeID>
+          <Name>Company</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="62bedbd0-3456-461e-a238-b1658696ed15">
+          <AttributeID>Source Cover ID</AttributeID>
+          <Name>Source Cover</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="42500250-8184-4dc1-9dbf-3088cd4778bf">
+          <AttributeID>Account Branch ID</AttributeID>
+          <Name>Account Branch</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6d71185e-0afa-4493-a6ae-153b697b166a">
+          <AttributeID>Cover Kind</AttributeID>
+          <Name>Cover Kind</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0790dd78-dbbc-4f04-8c23-428ffde9c40d">
+      <ID>Company Branch Key</ID>
+      <Name>Branch</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="30256d95-66dd-4c2b-bf83-933809754749">
+          <DataType>WChar</DataType>
+          <DataSize>7</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c9ca5b1-c9e4-4cdd-ac29-65c99434f757">
+            <TableID>dbo_DimInsuranceCoverage</TableID>
+            <ColumnID>CompanyBranchKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b84eefaa-6a4c-40ca-a6ac-6171b83df3fd">
+        <DataType>WChar</DataType>
+        <DataSize>60</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="2cb509a2-7a9d-459d-ae12-cea0707b0d21">
+          <TableID>dbo_DimInsuranceCoverage</TableID>
+          <ColumnID>BranchDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="84b006ee-e136-4c24-af9c-f0daded978e5">
+      <ID>Company ID</ID>
+      <Name>Company</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="45c02993-ef7b-4954-b295-c909b5bec53d">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="88edebae-b45a-4b15-a4b3-8aa8a521b30d">
+            <TableID>dbo_DimInsuranceCoverage</TableID>
+            <ColumnID>CompanyID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c271b636-06dd-4947-ac92-69d13e1a0cf2">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="dd777470-c0ef-4163-8bec-92e582689d26">
+          <TableID>dbo_DimInsuranceCoverage</TableID>
+          <ColumnID>CompanyDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b0fe0163-1dfb-4920-b9ea-1461be9f80b0">
+      <ID>Source Cover ID</ID>
+      <Name>Source Cover</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7fb633c0-95a1-4da7-aa7f-885a3079c0e8">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="75f9ad36-9c94-4d59-a3b3-b7267b2c79c0">
+            <TableID>dbo_DimInsuranceCoverage</TableID>
+            <ColumnID>Source_CoverID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="5738c4e3-f416-443b-b919-5152249277c3">
+        <DataType>WChar</DataType>
+        <DataSize>113</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4367d088-b11a-4b15-8a76-c890311debd4">
+          <TableID>dbo_DimInsuranceCoverage</TableID>
+          <ColumnID>Source_CoverDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7d14b4e4-5cb4-4db2-b0aa-7e25f9fc9a75">
+      <ID>Account Branch ID</ID>
+      <Name>Account Branch</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bd503476-8df4-4b06-9b91-6526479b0420">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="473dcbcd-e6b9-450a-831a-3eeccf3ba0b4">
+            <TableID>dbo_DimInsuranceCoverage</TableID>
+            <ColumnID>AccountBranchID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3eefb066-50fb-4f7f-b4b9-a052d7efe3de">
+        <DataType>WChar</DataType>
+        <DataSize>105</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="92a97ca5-3bc2-4954-8393-22fbeccb2315">
+          <TableID>dbo_DimInsuranceCoverage</TableID>
+          <ColumnID>AccountBranchDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cac1a940-c2c3-4dad-8d5e-9661b37da90d">
+      <ID>Cover Kind</ID>
+      <Name>Cover Kind</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a02aa921-1507-43d8-9d16-c045566eb401">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0940c492-f020-4e3a-b660-798ba73d56b6">
+            <TableID>dbo_DimInsuranceCoverage</TableID>
+            <ColumnID>CoverKind</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="1f55a0d4-fe39-42c6-b624-292297bdba2e">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b4fc79e9-cd58-4cfb-9e25-acc23f7b21a6">
+          <TableID>dbo_DimInsuranceCoverage</TableID>
+          <ColumnID>CoverKindDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ProactiveCaching dwd:design-time-name="2f331c42-5143-4e85-9317-4e9f8393a38d">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="e302fab4-13d6-4c12-a692-67526e1c53c0" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

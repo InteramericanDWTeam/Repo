@@ -1,0 +1,427 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c841a911-0c34-4791-9e8d-fd3c187ce840" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Agent Income</ID>
+  <Name>Dim Agent Income</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3261" scrolltop="-8017" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10874" y="21034" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01a10000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimAgentIncome" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="5106" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000f213000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimAgentIncome" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3261</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-8017</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="39b94c00-2e5a-4ccc-b63f-54133d4aee04">
+    <DataSourceViewID>InterDSV</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="c67570b2-7a73-4e45-8bbd-670673bd45d5">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyConvertedToUnknown>ReportAndContinue</NullKeyConvertedToUnknown>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="da509772-a04f-4612-999e-3ae08e94897f">
+      <ID>Event Key</ID>
+      <Name>Event Key</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>14334101</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ec68790b-35e2-4c38-96cb-a0709bca5d0b">
+          <DataType>WChar</DataType>
+          <DataSize>85</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ab52579e-4b36-4570-a0af-e5738c456da1">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>EventKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="3bdba368-f0b2-4bd9-b3e9-b45e2adad3ae">
+          <AttributeID>Event Date</AttributeID>
+          <Name>Event Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c8986adb-2e8f-4e25-acf1-3a78aee9d828">
+          <AttributeID>Issue Date</AttributeID>
+          <Name>Issue Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cfd72b39-c8d4-4c6a-93aa-27c1bc555166">
+          <AttributeID>Entry Status Date</AttributeID>
+          <Name>Entry Status Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="98ce6a8d-cf16-484a-b3c5-efbd074eec68">
+          <AttributeID>Ledger No</AttributeID>
+          <Name>Ledger No</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d6c1c54b-ff37-4c2c-855a-bc77b2498959">
+          <AttributeID>Instal Num</AttributeID>
+          <Name>Instal Num</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="19bae39b-a0cd-4f53-af1e-6ce0ec830784">
+          <AttributeID>AA Num</AttributeID>
+          <Name>AA Num</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1dcb6f25-24fe-4b3f-b44b-72be5e0d1720">
+          <AttributeID>Event Type ID</AttributeID>
+          <Name>Event Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7b84e2a3-06ed-4fe6-83c1-e2e6faedb13e">
+          <AttributeID>Event Type Category ID</AttributeID>
+          <Name>Event Type Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2806f04f-3545-44e7-a449-bd144e0c40be">
+          <AttributeID>Agent Type</AttributeID>
+          <Name>Agent Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a9ca7394-aa4a-4bca-b941-1247f16f0717">
+          <AttributeID>Entry Type ID</AttributeID>
+          <Name>Entry Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fc04ac59-a62b-4f63-93b0-1055fce9cfc8">
+          <AttributeID>Entry Status ID</AttributeID>
+          <Name>Entry Status</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a061fb30-3fa1-4a2f-8212-45f974990972">
+          <AttributeID>First Year Policy Flag</AttributeID>
+          <Name>First Year Policy Flag</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="905d745a-ae80-4bdc-83f1-507cd05ec41f">
+      <ID>Event Date</ID>
+      <Name>Event Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3602d16f-110d-4b62-a20b-579f9ca47981">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="03847d0f-3050-4918-a693-31a9f49758df">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>EventDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b3d4590a-feb5-4833-8c3e-902d8647a378">
+        <DataType>WChar</DataType>
+        <DataSize>11</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7e623991-e3da-46b3-881c-d81caeefc876">
+          <TableID>dbo_DimAgentIncome</TableID>
+          <ColumnID>EventDateDescr</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="95224451-4fdd-4693-869a-87f65bbaa60c">
+      <ID>Issue Date</ID>
+      <Name>Issue Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c75e5e07-c55c-42d2-aa96-c64e6429ef7e">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6a31320d-7f46-48b8-b77e-2f70380e2a26">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>IssueDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="54fe56fe-3fdb-44e3-a021-718415224ca1">
+        <DataType>WChar</DataType>
+        <DataSize>11</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="81d92f62-d679-49ca-a270-780b1bc88f19">
+          <TableID>dbo_DimAgentIncome</TableID>
+          <ColumnID>IssueDateDescr</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7a51b56c-6055-4083-a8e3-7b6ddf33a7cc">
+      <ID>Entry Status Date</ID>
+      <Name>Entry Status Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b2359fd1-cb89-4cd5-886f-e85e1f82c606">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ebac4a15-fe9a-429b-9cdc-211557557a77">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>EntryStatusDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="22d462fc-014d-4fdf-b576-aa2d5bfd6649">
+        <DataType>WChar</DataType>
+        <DataSize>11</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="9b07807b-9739-40ab-9e44-acfc4569e2b2">
+          <TableID>dbo_DimAgentIncome</TableID>
+          <ColumnID>EntryStatusDateDescr</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a0eccfb7-dde5-4548-8ac6-0f4ae50fa772">
+      <ID>Ledger No</ID>
+      <Name>Ledger No</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f0a0d27-2baa-433b-af85-cfdef2b99d66">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4352c125-60a0-459d-9c91-29cab9380c8a">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>LedgerNo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ea93f428-fc92-480a-bc57-6fb9d72d91a3">
+      <ID>Instal Num</ID>
+      <Name>Instal Num</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1799c1f1-a36e-4e27-ba5c-f5b396cb539c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="377086c6-aa4d-4ff8-9fbf-1c9d608b178d">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>InstalNum</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="515c8e42-ae8e-44fa-ba32-29d0e88f7e22">
+      <ID>AA Num</ID>
+      <Name>AA Num</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="de095471-1cf9-4351-ba1c-3f447ac51252">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="552a5eda-5624-43a3-9010-29e48e8c98ac">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>AANum</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b381a48b-54ee-4375-b92e-0c4c861cab8a">
+      <ID>Event Type ID</ID>
+      <Name>Event Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6f335995-499d-40e6-b121-b3809f51177c">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f5529e1c-19b2-4dca-957b-d2360a143fce">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>EventTypeID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e8680df7-fc34-4d24-9d4b-d4ca3d774637">
+        <DataType>WChar</DataType>
+        <DataSize>108</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="97257730-5b43-4eb7-b89f-dbcbf6cc1fb4">
+          <TableID>dbo_DimAgentIncome</TableID>
+          <ColumnID>EventTypeDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ab460aa8-5034-4d33-9110-82d2a65a95d3">
+      <ID>Event Type Category ID</ID>
+      <Name>Event Type Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="455da67d-6a14-41fe-8eac-6cd90c443a05">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="be5b28b8-ddcc-43af-b611-7c7e0946c71a">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>EventTypeCategoryID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b924963a-7eb3-4af9-b238-f336730aabd9">
+        <DataType>WChar</DataType>
+        <DataSize>108</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="45cd08fb-5549-40b4-a5b6-27b541d87ffd">
+          <TableID>dbo_DimAgentIncome</TableID>
+          <ColumnID>EventTypeCategoryDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e4e85aae-dc7e-4d64-82fd-522ec47773ea">
+      <ID>Agent Type</ID>
+      <Name>Agent Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="14aebbdc-2c5b-4eef-bd6e-9327e55f90d8">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="352aafa0-e7a8-41f8-bfae-04e3e956488b">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>AgentType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d1634195-3ab5-4563-9a15-cd07f5593122">
+        <DataType>WChar</DataType>
+        <DataSize>108</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4f889b3e-8683-488e-a5e7-63e89ddd9ab6">
+          <TableID>dbo_DimAgentIncome</TableID>
+          <ColumnID>AgentTypeDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f383bc8f-6975-459a-80ee-344d2ca1eb6f">
+      <ID>Entry Type ID</ID>
+      <Name>Entry Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="868e08c1-f60b-4dea-8e24-25668045fb0c">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b7a8d72c-948c-4ab1-a609-4272dbd61825">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>EntryTypeID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="73cf4c3b-94ec-4bdf-840d-2d580be3a395">
+        <DataType>WChar</DataType>
+        <DataSize>108</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b88da844-9a05-4233-b055-92d422b37348">
+          <TableID>dbo_DimAgentIncome</TableID>
+          <ColumnID>EntryTypeDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="61fd53dd-152e-4d84-a44e-a77062e28e99">
+      <ID>Entry Status ID</ID>
+      <Name>Entry Status</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5b2eeb96-7b55-48a5-aec8-a34b60473370">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5565d6d4-fbe4-4eae-8f75-4c255c0a3daf">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>EntryStatusID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c601f6ba-7bc9-4ed5-95f9-159621c4d929">
+        <DataType>WChar</DataType>
+        <DataSize>108</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5ff4ecdc-ea63-459e-85a2-63c0ff6d0cbe">
+          <TableID>dbo_DimAgentIncome</TableID>
+          <ColumnID>EntryStatusDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11a1ceff-ec60-4dcf-a383-175039218210">
+      <ID>First Year Policy Flag</ID>
+      <Name>First Year Policy Flag</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="93a94604-83af-4c90-9a03-335e568890eb">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5f02a21d-8e1b-444b-ad8a-c29c3b41db59">
+            <TableID>dbo_DimAgentIncome</TableID>
+            <ColumnID>FirstYearPolicyFlag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="ce0b6d0f-f665-4fe0-bda9-4ab61022f216">
+      <ID>Hierarchy</ID>
+      <Name>Event Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="97d47621-88df-4036-b2a4-47c36ebb264f">
+          <ID>Event Key</ID>
+          <Name>Event Key</Name>
+          <SourceAttributeID>Event Key</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:StringStoresCompatibilityLevel>1100</ddl300:StringStoresCompatibilityLevel>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

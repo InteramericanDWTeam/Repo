@@ -1,0 +1,548 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3023b305-f7fc-4f1f-aae3-22bd1ee7fe29" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Payments TEMP</ID>
+  <Name>Dim Ledger</Name>
+  <CreatedTimestamp>2017-11-21T10:00:49.643333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2017-12-19T06:26:06Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3433" scrolltop="-8798" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10530" y="16933" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01a10000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimPayments" left="-218" top="-7302" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="6085" height="13810" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000c5170000f2350000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimPaymentsTEMP" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3433</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-8798</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-218</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-7302</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2017-12-19T06:31:40.203333Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="78542ac0-18c5-42f0-b033-33dfbd14182b">
+    <DataSourceViewID>InterDSV</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="7f0c4864-c359-460e-94ed-937f5c4a457e">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyConvertedToUnknown>ReportAndContinue</NullKeyConvertedToUnknown>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Language>1033</Language>
+  <Collation>Greek_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="5d91b42e-4722-4f5c-8c12-e0122329f02e">
+      <ID>Payment ID</ID>
+      <Name>Payment ID</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>2493002</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ce4d5c87-6814-4d50-acd1-f25299b76451">
+          <DataType>WChar</DataType>
+          <DataSize>110</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="de725f4f-9e0c-4fcf-bd91-504cb90c1c3c">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>PaymentID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="92780af9-b08e-4c7b-aadc-7f000e24281d">
+        <DataType>WChar</DataType>
+        <DataSize>110</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="e1201d22-f4cf-4f7f-8eb0-8efcc7a5e1f5">
+          <TableID>dbo_DimPaymentsTEMP</TableID>
+          <ColumnID>PaymentID</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c3a17747-dca9-49ce-9b2f-22f3fce875cd">
+          <AttributeID>Ledger Origin ID</AttributeID>
+          <Name>Ledger Origin ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="131d668f-d83f-4598-8a9d-8ff5911fc795">
+          <AttributeID>Ledger Type ID</AttributeID>
+          <Name>Ledger Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="19c17786-4963-426a-a393-5c38c2d1afbb">
+          <AttributeID>Way Of Pay ID</AttributeID>
+          <Name>Way Of Pay ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="93cfa909-7467-41cd-98ca-72fad27edf43">
+          <AttributeID>Currency ID</AttributeID>
+          <Name>Currency</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="76f5035f-45c5-42df-9084-5147e23c0348">
+          <AttributeID>Status ID</AttributeID>
+          <Name>Status ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ff2394aa-d1b1-409e-a4c8-e09a63937910">
+          <AttributeID>Instal Num</AttributeID>
+          <Name>Instal Num</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="752a76c6-7801-470b-9e77-4d7f894cc243">
+          <AttributeID>Ledger No</AttributeID>
+          <Name>Ledger No</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0c27d15b-2600-47af-b4d5-71ec9033da53">
+          <AttributeID>Refund ID</AttributeID>
+          <Name>Refund ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9c645a80-8d85-4076-b0f2-43df1898ed38">
+          <AttributeID>Report Status ID</AttributeID>
+          <Name>Report Status</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="df9a532a-8979-49ae-ba40-ce4a5e5d763c">
+          <AttributeID>Agent Category ID</AttributeID>
+          <Name>Agent Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="18a0e9d0-0523-4e08-8bb2-3de04b36606f">
+          <AttributeID>Policy ID</AttributeID>
+          <Name>Policy ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7d9b8c16-f57e-432b-8e83-e7edad8d2ba6">
+          <AttributeID>Composer Flag</AttributeID>
+          <Name>Composer Flag</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="09a5cddd-b105-40b1-a911-3a7373b33b93">
+          <AttributeID>First Year Policy ID</AttributeID>
+          <Name>First Year Policy ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ae4aa975-abe3-4040-a225-05e54935cc85">
+          <AttributeID>First Year Policy Flag</AttributeID>
+          <Name>First Year Policy Flag</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2ce79a2c-de50-4627-8112-6edac948e946">
+          <AttributeID>Issue Date</AttributeID>
+          <Name>Issue Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="62f26fec-b6e5-4b66-99be-cc79d52c3503">
+          <AttributeID>Instal Due Date</AttributeID>
+          <Name>Instal Due Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9ebc489f-928e-4ec7-835d-6cc7978c27ed">
+          <AttributeID>Start Date</AttributeID>
+          <Name>Start Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4e66bcb3-f545-40d9-b2b0-c0037f6af4bb">
+          <AttributeID>End Date</AttributeID>
+          <Name>End Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a12b7b67-a684-4d8d-8d00-152a1f7b9a81">
+          <AttributeID>Risk ID Flag</AttributeID>
+          <Name>Risk ID Flag</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="14c0d633-6f75-44b5-9395-2f5d6f99b503">
+      <ID>Ledger Origin ID</ID>
+      <Name>Ledger Origin</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aa506a36-11f1-420d-93af-841db0676ada">
+          <DataType>WChar</DataType>
+          <DataSize>7</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="117d273b-da6a-4fbc-a13c-a0ad1dd32adb">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>LedgerOriginID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c878f51c-4043-4d48-9a6d-14ffe197a9d4">
+        <DataType>WChar</DataType>
+        <DataSize>80</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7fc55927-2b5e-4030-a868-2dd90a9d74ad">
+          <TableID>dbo_DimPaymentsTEMP</TableID>
+          <ColumnID>LedgerOriginCodeDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f7c1ad55-c2fa-4dc2-a418-96cceea99627">
+      <ID>Ledger Type ID</ID>
+      <Name>Ledger Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="565d92c3-c463-49f2-82c0-6b20e9d94f6f">
+          <DataType>WChar</DataType>
+          <DataSize>7</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b70e86b9-5728-4d53-8ca1-9a9d2cc88c20">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>LedgerTypeID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="149c5dcb-9a3a-4ac2-8b67-451fb83d2202">
+        <DataType>WChar</DataType>
+        <DataSize>80</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="9bbd3d3c-ffa0-4f16-8838-4872a31639aa">
+          <TableID>dbo_DimPaymentsTEMP</TableID>
+          <ColumnID>LedgerTypeCodeDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="887bbd00-ea59-4136-a457-91581a2dd83c">
+      <ID>Way Of Pay ID</ID>
+      <Name>Way Of Pay</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4f2bfff7-de25-4e27-b89d-84cae2941104">
+          <DataType>WChar</DataType>
+          <DataSize>7</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="62e3af95-8e84-4ed3-90f3-680e2088a95e">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>WayOfPayID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="31fd4dad-029a-4cdd-b35a-42de79e8812e">
+        <DataType>WChar</DataType>
+        <DataSize>80</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="cef64e63-9191-4c4e-822b-894aa2a5abbe">
+          <TableID>dbo_DimPaymentsTEMP</TableID>
+          <ColumnID>WayOfPayCodeDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5f421bbf-e8cb-49ca-a437-92f9bf9e7491">
+      <ID>Currency ID</ID>
+      <Name>Currency</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7e56537c-d48c-4785-96e1-45132805345c">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7cbb11fe-b7b3-4f4d-aeeb-971e8099b4ec">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>CurrencyID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="a750b4fd-6ec9-4767-8ec0-cfcb9c6560c8">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="3edfce0f-deac-4891-8eaa-6b451316e050">
+          <TableID>dbo_DimPaymentsTEMP</TableID>
+          <ColumnID>CurrencyCodeDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e4db2ef5-2dbb-4feb-8af0-77c51ed4cb42">
+      <ID>Status ID</ID>
+      <Name>Status ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d5a7ac2a-25ae-4a99-a56d-de8b10db97c0">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9801c9fb-49ac-4400-ba07-74ed713c4043">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>StatusID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3a20115b-f4bd-4877-a493-5ab6ebb10031">
+        <DataType>WChar</DataType>
+        <DataSize>85</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="78e00185-cc82-4d83-b237-1902c3e47c8f">
+          <TableID>dbo_DimPaymentsTEMP</TableID>
+          <ColumnID>StatusDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d1e4ca13-5848-4897-a6c2-ca2b7384cf71">
+      <ID>Instal Num</ID>
+      <Name>Instal Num</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b5ceba83-cf3d-46bc-9181-a6a7925d59fd">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ad05df7d-3a20-4176-a402-81b7a0666cbf">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>InstalNum</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="575df0d9-d83e-4c15-b530-2a0c32e9d291">
+      <ID>Ledger No</ID>
+      <Name>Ledger No</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="413bf7c5-8967-4957-91eb-dfe09af65e73">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="775c41e3-2842-4707-a131-df738f3263c6">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>LedgerNo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3d866021-e84f-4dc8-b453-1aa6715249c7">
+      <ID>Refund ID</ID>
+      <Name>Refund ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="86ea3270-1c6c-453c-bd92-46ff2049de31">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f75c2853-a80a-4d3e-9cd3-b7ecd66fa087">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>RefundID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e49e18ff-e33d-43a1-aa64-59a19b845845">
+      <ID>Report Status ID</ID>
+      <Name>Report Status</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b8739c33-6a3a-4fab-9fb6-5c7dc01ddcaf">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="edb20158-fcf1-4b82-83cb-fcf066290a38">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>ReportStatusID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ae8b3b2f-d21a-44ef-9630-93c63f16d217">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="1913d303-b569-45a9-8911-82e58b45012f">
+          <TableID>dbo_DimPaymentsTEMP</TableID>
+          <ColumnID>ReportStatusDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d489c3d6-1409-40e5-bc6a-3de2ab889bd0">
+      <ID>Agent Category ID</ID>
+      <Name>Agent Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="be8e1fac-ff31-4fc4-82a0-96cd7fe0e10e">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="69949a72-d698-4adf-b45c-0732316d1c08">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>AgentCategoryID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e11db481-c011-4a89-a89b-63d448a7e251">
+        <DataType>WChar</DataType>
+        <DataSize>78</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="c340c381-50bd-4d93-aebf-bed7bd93eb5a">
+          <TableID>dbo_DimPaymentsTEMP</TableID>
+          <ColumnID>AgentCategoryDescription</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cea2cf17-70c8-4dfe-9908-7b770a46dd13">
+      <ID>Policy ID</ID>
+      <Name>Policy ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7a8d6897-ba31-4370-91cc-ddac95c7fccb">
+          <DataType>WChar</DataType>
+          <DataSize>23</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f7debea5-499c-4e35-92e7-4ad6715e02e9">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>PolicyID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="14a2deb4-9591-4aeb-9e1b-b04a6a1f8cb5">
+      <ID>Composer Flag</ID>
+      <Name>Composer Flag</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c1fe3499-406c-4f57-953f-719ca09cdc50">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1d97a4a1-9c4c-40f9-be7e-17030ee6b2c8">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>ComposerFlag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2de37a06-8759-4b70-89c3-8e85332727f0">
+      <ID>First Year Policy ID</ID>
+      <Name>First Year Policy ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9d8c1dc9-142b-4954-9632-efba66c15650">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="52e544c4-bd8c-4591-9a56-3e5e2a628ac9">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>FirstYearPolicyID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b0d035fb-0b2a-4e8c-8c7f-8484c5da235d">
+      <ID>First Year Policy Flag</ID>
+      <Name>First Year Policy Flag</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c4e817d4-87db-4f1d-86a3-49fe7f6f44a7">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="07b187f6-1039-416d-b3f0-0d6afa657823">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>FirstYearPolicyFlag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fa22ffd5-2bcd-48f7-a6d6-bf70ad771937">
+      <ID>Issue Date</ID>
+      <Name>Issue Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f3366ba6-c32c-4f33-82a0-e82b993eb0df">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="becb50ee-d433-4bd3-aa97-bcb6b26c53b9">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>IssueDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1961ccd2-802d-443f-8300-bf80c3696e09">
+      <ID>Instal Due Date</ID>
+      <Name>Instal Due Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c8a9d288-32fc-4dd4-958f-ca16a470bf91">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3da2e083-90e3-42f3-955b-e343a2e1a723">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>InstalDueDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cac64004-2ebc-4e48-9c4b-1db053b6983b">
+      <ID>Start Date</ID>
+      <Name>Start Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="06c32d94-3112-4c25-97bc-5bd96f7d2c2a">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8739c2bd-3a72-4416-825b-72603a7e66d4">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>StartDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="319c99e6-3d2d-47fd-b5f2-0fdac21d6d49">
+      <ID>End Date</ID>
+      <Name>End Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4d907dd6-78dd-46c7-8217-8a26c0f13736">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="94914359-db54-422f-947a-c2ee419308dc">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>EndDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="38b9505c-7021-401d-b8f8-5a0aed802dc6">
+      <ID>Risk ID Flag</ID>
+      <Name>Risk ID Flag</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d29f194f-be2e-418a-b56f-c159ff9e3d1b">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1281e334-75ee-4a29-ace7-ab107c1a5af6">
+            <TableID>dbo_DimPaymentsTEMP</TableID>
+            <ColumnID>RiskIDFlag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ProactiveCaching dwd:design-time-name="5fcb5da2-5adf-4a36-bce6-861220c2b2e1">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="9847805c-31ec-4777-ac59-1f9e51f0e351" />
+  </ProactiveCaching>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
